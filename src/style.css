@@ -6,8 +6,9 @@
 }
 
 body {
-    background-image: url(../images/back.jpg);
+    background-image: url(../images/back.jpeg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -67,6 +68,7 @@ main {
 .principal {
     display: flex;
     margin-top: 3rem;
+    margin-left: 2rem;
     gap: 2rem;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -76,12 +78,17 @@ main {
 .item {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     padding: 1rem;
     border-radius: 5px;
-    background-color:rgba(236, 124, 73, 0.5)
+    background-color:rgba(236, 124, 73, 0.8)
 }
 
+.nome-produto {
+    font-weight: 500;
+}
 .price-button {
     display: flex;
     justify-content: center;
@@ -90,13 +97,13 @@ main {
 }
 
 .price {
-    font-weight: 700;
-    color: rgb(11, 11, 138);
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 .price-button button{
     width: 6rem;
     height: 2rem;
-    border-radius: 10px;
+    border-radius: 15px;
     border: none;
     outline: none;
     background-color: rgb(189, 75, 23);
@@ -114,12 +121,68 @@ main {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    max-width: 30%;
-    padding: 3rem;
-    background-color: rgb(214, 203, 203, 0.8);
+    width: 40%;
+    max-width: 40%;
+    padding: 1rem;
+    
+    background-color: rgba(236, 124, 73, 0.5)
 }
 
+#lista-produtos span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+#lista-produtos {
+    margin-top: 1rem;
+    background-color: rgb(214, 203, 203, 0.5);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
   
+.botaoIconesAumentar button, .botaoIconesDel button, .botaoIconesDiminuir button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 1rem;
+    width: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: transparent;
+  }
+
+  .itens, .spans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #total {
+    margin-bottom: 1rem;
+  }
+
+  #botao-comprar {
+    height: 2rem;
+    width: 9rem;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(189, 75, 23);
+    color: white;
+    font-size: 1rem;
+  }
+
+  #botao-comprar:hover {
+    background-color: rgb(180, 92, 50);
+}
 footer {
     display: flex;
     align-items: center;
@@ -127,6 +190,6 @@ footer {
     width: 100%;
     padding: 1rem;
     margin-top: 2rem;
-    background-color: rgb(214, 203, 203, 0.8)
+    background-color: rgb(214, 203, 203, 0.8);
 
 }

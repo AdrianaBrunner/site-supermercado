@@ -36,40 +36,67 @@
       <div class="principal">
         <div class="item">
           <img src="./images/macarrao.png" alt="" height="200px" />
-          <span class="nome-produto">Macarrão Parafuso Adria 500g</span>
+          <span class="nome-produto" id="macarrao">Macarrão Parafuso Adria 500g</span>
           <div class="price-button">
-            <span class="price">10,00</span>
-            <button class="botao-carrinho" data-nome="Macarrão Adria" data-preco="10.00"onclick="adicionarProdutos()">Adicionar</button>
+            <span class="price">R$ 10,00</span>
+            <button class="botao-carrinho" id="produto1" onclick="addProduto1()">Adicionar</button>
           </div>
         </div>
 
         <div class="item">
-          <img src="./images/macarrao.png" alt="" height="200px" />
-          <span class="nome-produto">Arroz Adria 500g</span>
+          <img src="./images/arroz.png" alt="" height="200px" />
+          <span class="nome-produto" id="arroz">Arroz Tio João 1kg</span>
           <div class="price-button">
-            <span class="price">15,50</span>
-            <button class="botao-carrinho" data-nome="Arroz Adria" data-preco="15.50" onclick="adicionarProdutos()">Adicionar</button>
+            <span class="price">R$ 15,50</span>
+            <button class="botao-carrinho" id="produto2" onclick="addProduto2()">Adicionar</button>
           </div>
         </div>
 
        
         <div class="item">
-          <img src="./images/macarrao.png" alt="" height="200px" />
-          <span class="nome-produto">Café Adria 500g</span>
+          <img src="./images/cafe.png" alt="" height="200px" />
+          <span class="nome-produto" id="cafe">Café 3 Corações 500g</span>
           <div class="price-button">
-            <span class="price">5,50</span>
-            <button class="botao-carrinho"  data-nome="Café Adria" data-preco="5.50"onclick="adicionarProdutos()">Adicionar</button>
+            <span class="price">R$ 5,50</span>
+            <button class="botao-carrinho" id="produto3" onclick="addProduto3()">Adicionar</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="./images/acucar.png" alt="" height="200px" />
+          <span class="nome-produto" id="acucar">Açucar União 500g</span>
+          <div class="price-button">
+            <span class="price">R$ 2,50</span>
+            <button class="botao-carrinho" id="produto4" onclick="addProduto4()">Adicionar</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="./images/oleo.png" alt="" height="200px" />
+          <span class="nome-produto" id="oleo">Óleo Soja 250mlg</span>
+          <div class="price-button">
+            <span class="price">R$ 9,00</span>
+            <button class="botao-carrinho" id="produto5" onclick="addProduto5()">Adicionar</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="./images/coca.png" alt="" height="200px" />
+          <span class="nome-produto" id="coca">Coca-Cola 2L</span>
+          <div class="price-button">
+            <span class="price">R$ 8,50</span>
+            <button class="botao-carrinho" id="produto6" onclick="addProduto6()">Adicionar</button>
           </div>
         </div>
       </div>
 
       <div class="carrinho">
         <h2>Carrinho de Compras</h2>
-        <ul class="lista-produtos">
-          <!-- lista de produtos do carrinho -->
-        </ul>
-        <p id="total">Total: R$ 0,00</p>
-        <button id="botao-comprar">Comprar</button>
+        <div id="lista-produtos">
+      
+        </div>
+        <p id="total"></p>
+        <button id="botao-comprar" onclick="finalizar()">Finalizar Compra</button>
       </div>
     </main>
 
