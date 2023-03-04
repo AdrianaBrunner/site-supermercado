@@ -134,10 +134,10 @@ function inserirItem(item, index) {
         </div>      
 
         <div class="itens">
-            <span>${item.product}</span>
-            <span>Qt: ${item.amount}</span>
-            <span>Preço Unitário: R$${Math.abs(item.price).toFixed(2)}</span>
-            <span>Preço Total: R$${Math.abs(item.price * item.amount).toFixed(2)}</span>
+            <div id="product"><span>${item.product}</span></div>
+            <div id="amount"><span>Qt: ${item.amount} </span></div>
+            <div id="priceU"><span>Preço Unitário: R$${Math.abs(item.price).toFixed(2)}</span></div>
+            <div id="priceT"><span>Preço Total: R$${Math.abs(item.price * item.amount).toFixed(2)}</span></div>
             <div class="botaoIconesDel"> <button onclick="deleteItem(${index})">x</button>
             </div>
         </div>

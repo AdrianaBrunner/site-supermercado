@@ -27,18 +27,28 @@ header {
     align-items: center;
 }
 
-#titulo {
-    display: flex;
-    gap: 1rem;
+#imgH1 img:hover {
+    transition: all 0.3s ease-in-out;
+    transform: rotate(360deg);
 }
 
+#titulo {
+    display: flex;
+    gap: 0.8rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#titulo:hover {
+    transform: scale(1.1);
+}
 #titulo h1:first-child {
     color: rgb(189, 75, 23);
 }
 
 #titulo h1:nth-child(2){
-    color: rgb(11, 11, 138)
+    color: rgb(11, 11, 138);
 }
+
 header img {
     height: 5rem;
 }
@@ -58,6 +68,8 @@ header .material-symbols-outlined {
     font-size: 18px;
     font-weight: 700;
     width: 180px;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 main {
@@ -68,7 +80,7 @@ main {
 .principal {
     display: flex;
     margin-top: 3rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
     gap: 2rem;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -80,10 +92,16 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     padding: 1rem;
     border-radius: 5px;
-    background-color:rgba(236, 124, 73, 0.8)
+    background-color:rgba(236, 124, 73, 0.8);
+    color: rgb(4, 4, 100);
+    transition: all 0.3s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.1);
 }
 
 .nome-produto {
@@ -113,7 +131,7 @@ main {
 }
 
 .price-button button:hover {
-    background-color: rgb(180, 92, 50);
+    background-color: rgb(122, 49, 15);
 }
 
 .carrinho {
@@ -124,15 +142,15 @@ main {
     width: 40%;
     max-width: 40%;
     padding: 1rem;
-    
-    background-color: rgba(236, 124, 73, 0.5)
+    background-color: rgba(236, 124, 73, 0.5);
+    color: rgb(4, 4, 100)
 }
 
-#lista-produtos span{
+.itens span{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 1rem;
     margin-bottom: 0.8rem;
 }
 
@@ -141,6 +159,7 @@ main {
     background-color: rgb(214, 203, 203, 0.5);
     border-radius: 10px;
     margin-bottom: 1rem;
+
 }
   
 .botaoIconesAumentar button, .botaoIconesDel button, .botaoIconesDiminuir button{
@@ -149,7 +168,7 @@ main {
     align-items: center;
     text-align: center;
     height: 1rem;
-    width: 1.5rem;
+    width: 1rem;
     font-size: 2rem;
     font-weight: 700;
     border-radius: 1rem;
@@ -157,6 +176,7 @@ main {
     cursor: pointer;
     padding: 1rem;
     background-color: transparent;
+    
   }
 
   .itens, .spans {
@@ -170,6 +190,11 @@ main {
     margin-bottom: 1rem;
   }
 
+  #product, #amount, #priceU, #priceT {
+    width: 5rem;
+    font-weight: 500;
+  }
+
   #botao-comprar {
     height: 2rem;
     width: 9rem;
@@ -181,7 +206,18 @@ main {
   }
 
   #botao-comprar:hover {
-    background-color: rgb(180, 92, 50);
+    background-color: rgb(122, 49, 15);
+}
+
+#botao-comprar {
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#botao-comprar:hover{
+    transform: scale(1.1);
 }
 footer {
     display: flex;
