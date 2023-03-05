@@ -4,9 +4,12 @@ let compras = [];
 
 const total = document.querySelector("#total");
 
-function addProduto(produto) {
+function addProduto(produto, preco) {
 
-    let nomeProduto = document.querySelector(produto).textContent
+    let nomeProduto = document.querySelector(produto).textContent;
+    let spanPreco = document.querySelector(preco);
+    let precoFloat = parseFloat(spanPreco.textContent.replace(/[^\d.,]/g, '').replace(',', '.'));
+
     const temOProduto = compras.find((produto) => produto.product === nomeProduto);
     if (temOProduto) {
         temOProduto.amount++;
@@ -14,7 +17,7 @@ function addProduto(produto) {
         compras.push({
             product: nomeProduto,
             amount: 1,
-            price: 10.00,
+            price: precoFloat,
         });
     }
 
@@ -115,6 +118,7 @@ function finalizar() {
         window.location.reload(true);
     }, 2000)
 
+    localStorage.clear();
 
 }
 
