@@ -1,232 +1,274 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-image: url(../images/back.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(../images/back.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header {
-    display: flex;
-    align-items: center;;
-    justify-content: space-between;
-    padding: 1.5rem;
-    font-size: 1.3rem;
-    background-color: rgb(214, 203, 203, 0.8)
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  background-color: rgb(214, 203, 203, 0.8);
 }
 
 #imgH1 {
-    gap: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #imgH1 img:hover {
-    transition: all 0.3s ease-in-out;
-    transform: rotate(360deg);
+  transition: all 0.3s ease-in-out;
+  transform: rotate(360deg);
 }
 
 #titulo {
-    display: flex;
-    gap: 0.8rem;
-    transition: all 0.3s ease-in-out;
+  display: flex;
+  gap: 0.8rem;
+  transition: all 0.3s ease-in-out;
 }
 
 #titulo:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 #titulo h1:first-child {
-    color: rgb(189, 75, 23);
+  color: rgb(189, 75, 23);
 }
 
-#titulo h1:nth-child(2){
-    color: rgb(11, 11, 138);
+#titulo h1:nth-child(2) {
+  color: rgb(11, 11, 138);
 }
 
 header img {
-    height: 5rem;
+  height: 5rem;
 }
 
 header .material-symbols-outlined {
-    font-size: 50px;
-    cursor: pointer;
-
+  font-size: 50px;
+  cursor: pointer;
 }
 #iconEntrar {
-    display: flex;
-    align-items: center;
-    color: rgb(189, 75, 23);
+  display: flex;
+  align-items: center;
+  color: rgb(189, 75, 23);
 }
 
 #entre {
-    font-size: 18px;
-    font-weight: 700;
-    width: 180px;
-    text-decoration: underline;
-    cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  width: 180px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 main {
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
 }
 .principal {
-    display: flex;
-    margin-top: 3rem;
-    margin-left: 1rem;
-    gap: 2rem;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 70%;
+  display: flex;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  gap: 2rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 70%;
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    border-radius: 5px;
-    background-color:rgba(236, 124, 73, 0.8);
-    color: rgb(4, 4, 100);
-    transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: rgba(236, 124, 73, 0.8);
+  color: rgb(4, 4, 100);
+  transition: all 0.3s ease-in-out;
 }
 
 .item:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .nome-produto {
-    font-weight: 500;
+  font-weight: 500;
 }
 .price-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .price {
-    font-size: 1.1rem;
-    font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
-.price-button button{
-    width: 6rem;
-    height: 2rem;
-    border-radius: 15px;
-    border: none;
-    outline: none;
-    background-color: rgb(189, 75, 23);
-    color: white;
-    font-size: 1rem;
-    font-weight: 400;
+.price-button button {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background-color: rgb(189, 75, 23);
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .price-button button:hover {
-    background-color: rgb(122, 49, 15);
+  background-color: rgb(122, 49, 15);
 }
 
 .carrinho {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    width: 40%;
-    max-width: 40%;
-    padding: 1rem;
-    background-color: rgba(236, 124, 73, 0.5);
-    color: rgb(4, 4, 100)
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  max-width: 40%;
+  padding: 1rem;
+  background-color: rgba(236, 124, 73, 0.5);
+  color: rgb(4, 4, 100);
 }
 
-.itens span{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 0.8rem;
+.itens span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 #lista-produtos {
-    margin-top: 1rem;
-    background-color: rgb(214, 203, 203, 0.5);
-    border-radius: 10px;
-    margin-bottom: 1rem;
-
+  margin-top: 1rem;
+  background-color: rgb(214, 203, 203, 0.5);
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
-  
-.botaoIconesAumentar button, .botaoIconesDel button, .botaoIconesDiminuir button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 1rem;
-    width: 1rem;
-    font-size: 2rem;
-    font-weight: 700;
-    border-radius: 1rem;
-    border: none;
-    cursor: pointer;
-    padding: 1rem;
-    background-color: transparent;
-    color: rgb(122, 49, 15);
-    
-  }
 
-  .itens, .spans {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+.botaoIconesAumentar button,
+.botaoIconesDel button,
+.botaoIconesDiminuir button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 1rem;
+  width: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  background-color: transparent;
+  color: rgb(122, 49, 15);
+}
 
-  #total {
-    margin-bottom: 1rem;
-  }
+.itens,
+.spans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-  #product, #amount, #priceU, #priceT {
-    width: 5rem;
-    font-weight: 500;
-  }
+#total {
+  margin-bottom: 1rem;
+}
 
-  #botao-comprar {
-    height: 2rem;
-    width: 9rem;
-    border: none;
-    border-radius: 15px;
-    background-color: rgb(189, 75, 23);
-    color: white;
-    font-size: 1rem;
-  }
-
-  #botao-comprar:hover {
-    background-color: rgb(122, 49, 15);
+#product,
+#amount,
+#priceU,
+#priceT {
+  width: 5rem;
+  font-weight: 500;
 }
 
 #botao-comprar {
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 2rem;
+  width: 9rem;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(189, 75, 23);
+  color: white;
+  font-size: 1rem;
 }
-#botao-comprar:hover{
-    transform: scale(1.1);
-}
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 1rem;
-    margin-top: 2rem;
-    background-color: rgb(214, 203, 203, 0.8);
 
+#botao-comprar:hover {
+  background-color: rgb(122, 49, 15);
+}
+
+#botao-comprar {
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#botao-comprar:hover {
+  transform: scale(1.1);
+}
+
+
+#compra-finalizada {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: none;
+  transition-duration: 0.1s;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
+}
+
+.esconder {
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 0.3s;
+}
+
+#compra-finalizada p {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 10rem;
+  border-radius: 20px;
+  background-color: rgb(100, 91, 91);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: rgb(214, 203, 203, 0.8);
 }

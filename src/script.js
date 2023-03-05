@@ -5,6 +5,7 @@ let compras = [];
 const total = document.querySelector("#total");
 
 function addProduto(produto) {
+
     let nomeProduto = document.querySelector(produto).textContent
     const temOProduto = compras.find((produto) => produto.product === nomeProduto);
     if (temOProduto) {
@@ -16,6 +17,10 @@ function addProduto(produto) {
             price: 10.00,
         });
     }
+
+    let div = document.querySelector('.carrinho')
+    div.style.display = 'flex';
+
     setCompras();
     carregarCompras();
 }
@@ -33,8 +38,8 @@ function aumentaItem(index) {
     carregarCompras();
 }
 function diminuiItem(index) {
-    if(compras[index].amount > 0) {
-    compras[index].amount--;
+    if (compras[index].amount > 0) {
+        compras[index].amount--;
     }
     setCompras();
     carregarCompras();
@@ -78,22 +83,45 @@ function getTotals() {
     let totalProdutos = 0;
     let totalPrecos = 0;
     let quantidadeProdutos = 0;
-  
+
     compras.forEach((element) => {
-      quantidadeProdutos++;
-      totalProdutos += element.amount;
-      totalPrecos += element.price;
+        quantidadeProdutos++;
+        totalProdutos += element.amount;
+        totalPrecos += element.price;
     });
-  
+
     let valorCompraTotal = totalProdutos * totalPrecos;
-  
+
     total.innerHTML = `<b>Valor Total: R$ ${Math.abs(valorCompraTotal).toFixed(2)}</b>`;
-  }
+}
 
 function finalizar() {
-    let div = document.createElement('div');
-    div.style.width = '100px';
-    div.innerText = `${valorCompraTotal}`
+
+    const finalizarCompras = document.getElementById('botao-comprar');
+    const compra = document.getElementById('compra-finalizada');
+
+    finalizarCompras.addEventListener('click', function () {
+        compra.style.display = 'block';
+        compra.style.overflow = 'hidden';
+    });
+
+    setTimeout(() => {
+        document.querySelector('#compra-finalizada').style.display = 'none';
+    }, 1500);
+
+    setTimeout(() => {
+        let carrinho = document.querySelector(".carrinho")
+        carrinho.classList.add('esconder')
+        compras = [];
+
+    }, 2000)
+
+
+    setTimeout(() => {
+        window.location.reload(true);
+    }, 2300)
+  
+
 }
 
 const getCompras = () =>
@@ -101,8 +129,5 @@ const getCompras = () =>
 
 const setCompras = () =>
     localStorage.setItem("BANCO_MERCADO", JSON.stringify(compras));
-
-
-
 
 
