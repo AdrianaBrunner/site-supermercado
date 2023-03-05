@@ -2,14 +2,10 @@ let listaProdutos = document.querySelector("#lista-produtos")
 
 let compras = [];
 
-let produto1 = document.querySelector("#produto1");
-let produto2 = document.querySelector("#produto2");
-let produto3 = document.querySelector("#produto3");
-
 const total = document.querySelector("#total");
 
-function addProduto1() {
-    let nomeProduto = document.querySelector("#macarrao").textContent
+function addProduto(produto) {
+    let nomeProduto = document.querySelector(produto).textContent
     const temOProduto = compras.find((produto) => produto.product === nomeProduto);
     if (temOProduto) {
         temOProduto.amount++;
@@ -18,86 +14,6 @@ function addProduto1() {
             product: nomeProduto,
             amount: 1,
             price: 10.00,
-        });
-    }
-    setCompras();
-    carregarCompras();
-}
-
-function addProduto2() {
-    let nomeProduto = document.querySelector("#arroz").textContent
-    const temOProduto = compras.find((produto) => produto.product === nomeProduto);
-    if (temOProduto) {
-        temOProduto.amount++;
-    } else {
-        compras.push({
-            product: nomeProduto,
-            amount: 1,
-            price: 15.50,
-        });
-    }
-    setCompras();
-    carregarCompras();
-}
-
-function addProduto3() {
-    let nomeProduto = document.querySelector("#cafe").textContent
-    const temOProduto = compras.find((produto) => produto.product === nomeProduto);
-    if (temOProduto) {
-        temOProduto.amount++;
-    } else {
-        compras.push({
-            product: nomeProduto,
-            amount: 1,
-            price: 5.50,
-        });
-    }
-    setCompras();
-    carregarCompras();
-}
-
-function addProduto4() {
-    let nomeProduto = document.querySelector("#acucar").textContent
-    const temOProduto = compras.find((produto) => produto.product === nomeProduto);
-    if (temOProduto) {
-        temOProduto.amount++;
-    } else {
-        compras.push({
-            product: nomeProduto,
-            amount: 1,
-            price: 2.50,
-        });
-    }
-    setCompras();
-    carregarCompras();
-}
-
-function addProduto5() {
-    let nomeProduto = document.querySelector("#oleo").textContent
-    const temOProduto = compras.find((produto) => produto.product === nomeProduto);
-    if (temOProduto) {
-        temOProduto.amount++;
-    } else {
-        compras.push({
-            product: nomeProduto,
-            amount: 1,
-            price: 9.00,
-        });
-    }
-    setCompras();
-    carregarCompras();
-}
-
-function addProduto6() {
-    let nomeProduto = document.querySelector("#coca").textContent
-    const temOProduto = compras.find((produto) => produto.product === nomeProduto);
-    if (temOProduto) {
-        temOProduto.amount++;
-    } else {
-        compras.push({
-            product: nomeProduto,
-            amount: 1,
-            price: 8.50,
         });
     }
     setCompras();
@@ -117,7 +33,9 @@ function aumentaItem(index) {
     carregarCompras();
 }
 function diminuiItem(index) {
+    if(compras[index].amount > 0) {
     compras[index].amount--;
+    }
     setCompras();
     carregarCompras();
 }

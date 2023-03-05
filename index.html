@@ -39,7 +39,7 @@
           <span class="nome-produto" id="macarrao">Macarrão Parafuso Adria 500g</span>
           <div class="price-button">
             <span class="price">R$ 10,00</span>
-            <button class="botao-carrinho" id="produto1" onclick="addProduto1()">Adicionar</button>
+            <button class="botao-carrinho" onclick="addProduto('#macarrao')">Adicionar</button>
           </div>
         </div>
 
@@ -48,7 +48,7 @@
           <span class="nome-produto" id="arroz">Arroz Tio João 1kg</span>
           <div class="price-button">
             <span class="price">R$ 15,50</span>
-            <button class="botao-carrinho" id="produto2" onclick="addProduto2()">Adicionar</button>
+            <button class="botao-carrinho" onclick="addProduto('#arroz')">Adicionar</button>
           </div>
         </div>
 
@@ -58,16 +58,16 @@
           <span class="nome-produto" id="cafe">Café 3 Corações 500g</span>
           <div class="price-button">
             <span class="price">R$ 5,50</span>
-            <button class="botao-carrinho" id="produto3" onclick="addProduto3()">Adicionar</button>
+            <button class="botao-carrinho" onclick="addProduto('#cafe')">Adicionar</button>
           </div>
         </div>
 
         <div class="item">
           <img src="./images/acucar.png" alt="" height="200px" />
-          <span class="nome-produto" id="acucar">Açucar União 500g</span>
+          <span class="nome-produto" id="acucar">Açúcar União 500g</span>
           <div class="price-button">
             <span class="price">R$ 2,50</span>
-            <button class="botao-carrinho" id="produto4" onclick="addProduto4()">Adicionar</button>
+            <button class="botao-carrinho"  onclick="addProduto('#acucar')">Adicionar</button>
           </div>
         </div>
 
@@ -76,7 +76,7 @@
           <span class="nome-produto" id="oleo">Óleo Soja 250mlg</span>
           <div class="price-button">
             <span class="price">R$ 9,00</span>
-            <button class="botao-carrinho" id="produto5" onclick="addProduto5()">Adicionar</button>
+            <button class="botao-carrinho" onclick="addProduto('#oleo')">Adicionar</button>
           </div>
         </div>
 
@@ -85,16 +85,15 @@
           <span class="nome-produto" id="coca">Coca-Cola 2L</span>
           <div class="price-button">
             <span class="price">R$ 8,50</span>
-            <button class="botao-carrinho" id="produto6" onclick="addProduto6()">Adicionar</button>
+            <button class="botao-carrinho"
+            onclick="addProduto('#coca')">Adicionar</button>
           </div>
         </div>
       </div>
 
-      <div class="carrinho">
+      <div class="carrinho" >
         <h2>Carrinho de Compras</h2>
-        <div id="lista-produtos">
-      
-        </div>
+        <div id="lista-produtos"></div>
         <p id="total"></p>
         <button id="botao-comprar" onclick="finalizar()">Finalizar Compra</button>
       </div>
