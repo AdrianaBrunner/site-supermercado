@@ -69,6 +69,8 @@ function inserirItem(item, index) {
         </div>
     </div>
     `;
+
+
     listaProdutos.appendChild(item1);
 }
 
@@ -83,17 +85,18 @@ function carregarCompras() {
 }
 
 function getTotals() {
+
+    let valorCompraTotal = 0;
     let totalProdutos = 0;
     let totalPrecos = 0;
     let quantidadeProdutos = 0;
 
     compras.forEach((element) => {
         quantidadeProdutos++;
-        totalProdutos += element.amount;
-        totalPrecos += element.price;
+        totalProdutos = element.amount;
+        totalPrecos = element.price;
+        valorCompraTotal += totalProdutos * totalPrecos;
     });
-
-    let valorCompraTotal = totalProdutos * totalPrecos;
 
     total.innerHTML = `<b>Valor Total: R$ ${Math.abs(valorCompraTotal).toFixed(2)}</b>`;
 }
