@@ -143,6 +143,9 @@ main {
   padding: 1rem;
   background-color: rgba(236, 124, 73, 0.5);
   color: rgb(4, 4, 100);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
 }
 
 .itens span {
@@ -234,10 +237,7 @@ main {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 9999;
   display: none;
-  transition-duration: 0.1s;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease;
+  transition-duration: 0.3s;
 }
 
 .esconder {

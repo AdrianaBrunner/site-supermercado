@@ -97,13 +97,9 @@ function getTotals() {
 
 function finalizar() {
 
-    const finalizarCompras = document.getElementById('botao-comprar');
     const compra = document.getElementById('compra-finalizada');
-
-    finalizarCompras.addEventListener('click', function () {
-        compra.style.display = 'block';
-        compra.style.overflow = 'hidden';
-    });
+    compra.style.display = 'flex';
+    compra.style.overflow = 'hidden';
 
     setTimeout(() => {
         document.querySelector('#compra-finalizada').style.display = 'none';
@@ -113,14 +109,12 @@ function finalizar() {
         let carrinho = document.querySelector(".carrinho")
         carrinho.classList.add('esconder')
         compras = [];
-
-    }, 2000)
-
+    }, 1700)
 
     setTimeout(() => {
         window.location.reload(true);
-    }, 2300)
-  
+    }, 2000)
+
 
 }
 
