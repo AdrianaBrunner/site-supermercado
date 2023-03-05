@@ -93,7 +93,7 @@ function getTotals() {
 
     compras.forEach((element) => {
         quantidadeProdutos++;
-        totalProdutos = element.amount;
+        totalProdutos = element.amount
         totalPrecos = element.price;
         valorCompraTotal += totalProdutos * totalPrecos;
     });
