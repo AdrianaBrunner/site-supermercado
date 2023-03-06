@@ -3,8 +3,12 @@ let listaProdutos = document.querySelector("#lista-produtos")
 let compras = [];
 
 const total = document.querySelector("#total");
+const totalIcon = document.querySelector("#totalIcon")
 
 function addProduto(produto, preco) {
+    
+    let carrinho = document.querySelector(".carrinho")
+    carrinho.classList.remove('esconder')
 
     let nomeProduto = document.querySelector(produto).textContent;
     let spanPreco = document.querySelector(preco);
@@ -99,6 +103,8 @@ function getTotals() {
     });
 
     total.innerHTML = `<b>Valor Total: R$ ${Math.abs(valorCompraTotal).toFixed(2)}</b>`;
+
+    totalIcon.innerHTML = `<b>R$ ${Math.abs(valorCompraTotal).toFixed(2)}</b>`;
 }
 
 function finalizar() {
@@ -119,10 +125,9 @@ function finalizar() {
 
     setTimeout(() => {
         window.location.reload(true);
-    }, 2000)
+    }, 1900)
 
     localStorage.clear();
-
 }
 
 const getCompras = () =>

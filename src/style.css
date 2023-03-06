@@ -6,9 +6,8 @@
 }
 
 body {
-  background-image: url(../images/back.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 100%;
+  background: rgb(11,11,138, 0.8);
 }
 
 header {
@@ -17,7 +16,8 @@ header {
   justify-content: space-between;
   padding: 1.5rem;
   font-size: 1.3rem;
-  background-color: rgb(214, 203, 203, 0.8);
+  width: 100%;
+  background-color: rgb(214, 203, 203, 0.5);
 }
 
 #imgH1 {
@@ -54,19 +54,24 @@ header img {
 }
 
 header .material-symbols-outlined {
-  font-size: 50px;
+  font-size: 2rem;
   cursor: pointer;
 }
 #iconEntrar {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   color: rgb(189, 75, 23);
+}
+
+#totalIcon {
+  font-size: 18px;
 }
 
 #entre {
   font-size: 18px;
   font-weight: 700;
-  width: 180px;
+  width: 170px;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -78,12 +83,17 @@ main {
 }
 .principal {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   margin-top: 3rem;
-  margin-left: 1rem;
   gap: 2rem;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 70%;
+  width: 100rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  max-width: 100%;
 }
 
 .item {
@@ -94,9 +104,10 @@ main {
   gap: 0.5rem;
   padding: 1rem;
   border-radius: 5px;
-  background-color: rgba(236, 124, 73, 0.8);
+  background-color: rgba(236, 124, 73, 0.3);
   color: rgb(4, 4, 100);
   transition: all 0.3s ease-in-out;
+  width: 250px;
 }
 
 .item:hover {
@@ -106,6 +117,11 @@ main {
 .nome-produto {
   font-weight: 500;
 }
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 .price-button {
   display: flex;
   justify-content: center;
@@ -113,10 +129,6 @@ main {
   gap: 2rem;
 }
 
-.price {
-  font-size: 1.1rem;
-  font-weight: 500;
-}
 .price-button button {
   width: 6rem;
   height: 2rem;
@@ -138,10 +150,10 @@ main {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 40%;
-  max-width: 40%;
+  width: 50%;
+  max-width: 50%;
   padding: 1rem;
-  background-color: rgba(236, 124, 73, 0.5);
+  background-color: rgba(236, 124, 73, 0.3);
   color: rgb(4, 4, 100);
   opacity: 1;
   visibility: visible;
@@ -227,7 +239,6 @@ main {
   transform: scale(1.1);
 }
 
-
 #compra-finalizada {
   position: fixed;
   top: 0;
@@ -241,9 +252,9 @@ main {
 }
 
 .esconder {
-    opacity: 0;
-    visibility: hidden;
-    transition-duration: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 0.3s;
 }
 
 #compra-finalizada p {
@@ -270,5 +281,270 @@ footer {
   width: 100%;
   padding: 1rem;
   margin-top: 2rem;
-  background-color: rgb(214, 203, 203, 0.8);
+  background-color: rgb(214, 203, 203, 0.5);
+}
+
+@media (min-width: 280px) and (max-width: 500px) {
+
+  header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  #imgH1 {
+    gap: 0.3rem;
+  }
+  header img {
+    height: 3rem;
+  }
+  #titulo {
+    gap: 0.2rem;
+    font-size: 0.5rem;
+  }
+
+  header .material-symbols-outlined {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  #entre {
+    font-size: 1rem;
+  }
+
+  #totalIcon {
+    font-size: 0.8rem;
+  }
+
+  .item img {
+    height: 9rem;
+  }
+
+  .nome-produto,
+  .price {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .price-button button {
+    width: 4rem;
+    font-size: 0.8rem;
+  }
+
+  .carrinho {
+    display: none !important;
+  }
+
+  .principal {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  #botaoTelaPequena {
+    width: 9rem;
+    height: 2rem;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: rgb(189, 75, 23);
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline !important;
+  }
+
+  #compra-finalizada p {
+    font-size: 1rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 20px;
+    background-color: rgb(100, 91, 91);
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 750px) {
+
+  header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  #imgH1 {
+    gap: 1rem;
+  }
+  header img {
+    height: 4rem;
+  }
+  #titulo {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  header .material-symbols-outlined {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  #entre {
+    font-size: 1.2rem;
+    width: 180px;
+  }
+
+  #totalIcon {
+    font-size: 1rem;
+  }
+
+  .item img {
+    height: 8rem;
+  }
+
+  .nome-produto,
+  .price {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .price-button button {
+    width: 4rem;
+    font-size: 0.8rem;
+  }
+
+  .carrinho {
+    display: none !important;
+  }
+
+  .principal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  #botaoTelaPequena {
+    width: 9rem;
+    height: 2rem;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: rgb(189, 75, 23);
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline !important;
+  }
+
+  #compra-finalizada p {
+    font-size: 1.5rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 8rem;
+    border-radius: 20px;
+    background-color: rgb(100, 91, 91);
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}
+
+
+@media (min-width: 751px) and (max-width: 1000px) {
+
+  #imgH1 {
+    gap: 1rem;
+  }
+  header img {
+    height: 4rem;
+  }
+  #titulo {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  header .material-symbols-outlined {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  #entre {
+    font-size: 1.2rem;
+    width: 180px;
+  }
+
+  #totalIcon {
+    font-size: 1rem;
+  }
+
+  .item img {
+    height: 10rem;
+  }
+
+  .nome-produto,
+  .price {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .price-button button {
+    width: 6rem;
+    font-size: 1rem;
+  }
+
+  .itens {
+    width: 18rem;
+  }
+
+  .itens span {
+    font-size: 0.8rem;
+  }
+  .principal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #compra-finalizada p {
+    font-size: 1.3rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 8rem;
+    border-radius: 20px;
+    background-color: rgb(100, 91, 91);
+  }
+
+  footer {
+    font-size: 1rem;
+  }
 }
