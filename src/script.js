@@ -6,9 +6,9 @@ const total = document.querySelector("#total");
 const totalIcon = document.querySelector("#totalIcon")
 
 function addProduto(produto, preco) {
-    
+
     let carrinho = document.querySelector(".carrinho")
-    carrinho.classList.remove('esconder')
+    carrinho.style.display = "flex"
 
     let nomeProduto = document.querySelector(produto).textContent;
     let spanPreco = document.querySelector(preco);
@@ -119,13 +119,9 @@ function finalizar() {
 
     setTimeout(() => {
         let carrinho = document.querySelector(".carrinho")
-        carrinho.classList.add('esconder')
+        carrinho.style.display = 'none';
         compras = [];
     }, 1700)
-
-    setTimeout(() => {
-        window.location.reload(true);
-    }, 1900)
 
     localStorage.clear();
 }
