@@ -290,7 +290,10 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: fixed;
+    top: 0;
     padding: 18px;
+    background-color: white;
   }
 
   #imgH1 {
@@ -317,6 +320,9 @@ footer {
     font-size: 0.8rem;
   }
 
+  #mac {
+    margin-top: 5rem;
+  }
   .item img {
     height: 8rem;
     width: 8rem;
@@ -343,14 +349,14 @@ footer {
     flex-wrap: nowrap;
   }
   #botaoTelaPequena {
-    width: 9rem;
+    width: 10rem;
     height: 2rem;
     border-radius: 15px;
     border: none;
     outline: none;
     background-color: white;
     color: rgb(189, 75, 23);
-    font-size: 1rem;
+    font-size: 0.6rem;
     font-weight: 700;
     display: inline !important;
   }
@@ -384,7 +390,10 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: fixed;
+    top: 0;
     padding: 18px;
+    background-color: white;
   }
 
   #imgH1 {
@@ -410,6 +419,10 @@ footer {
 
   #totalIcon {
     font-size: 1rem;
+  }
+
+  #mac {
+    margin-top: 8rem;
   }
 
   .item img {
